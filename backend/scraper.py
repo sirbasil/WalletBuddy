@@ -214,7 +214,6 @@ def scrape_flipkart(url, page):
     except:
         name = page.title()
 
-    # 🔥 PRICE (FIXED — more reliable)
     price = None
     try:
         price = page.locator("div._30jeq3").first.inner_text(timeout=4000)
